@@ -74,10 +74,10 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://internettechnology-front-end.vercel.app"
+    "https://internettechnologyfront-end.vercel.app",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://internettechnology-front-end.vercel.app"
+    "https://internettechnologyfront-end.vercel.app"
 ]
 # Required because project extends AbstractUser
 AUTH_USER_MODEL = "marketplace.User"
