@@ -69,7 +69,14 @@ MIDDLEWARE = [
     
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "https://internet-technology-front-end.vercel.app"
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://internet-technology-front-end.vercel.app"
+]
 # Required because project extends AbstractUser
 AUTH_USER_MODEL = "marketplace.User"
 # Supports image uploads for listings
