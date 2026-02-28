@@ -29,7 +29,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "internet-technologies-backend.onrender.com"
+]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
@@ -72,10 +74,10 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "https://internet-technology-front-end.vercel.app"
+    "https://internettechnology-front-end.vercel.app"
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://internet-technology-front-end.vercel.app"
+    "https://internettechnology-front-end.vercel.app"
 ]
 # Required because project extends AbstractUser
 AUTH_USER_MODEL = "marketplace.User"
