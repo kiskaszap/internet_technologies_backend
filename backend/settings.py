@@ -210,3 +210,6 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+if os.environ.get("CLEAR_LISTINGS") == "True":
+    from marketplace.models import Listing
+    Listing.objects.all().delete()
