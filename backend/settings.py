@@ -90,8 +90,8 @@ CSRF_TRUSTED_ORIGINS = [
 # Required because project extends AbstractUser
 AUTH_USER_MODEL = "marketplace.User"
 # Supports image uploads for listings
+MEDIA_ROOT = "/var/data/media"
 MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
 
 
 
