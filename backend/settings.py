@@ -202,6 +202,9 @@ CLOUDINARY_STORAGE = {
 
 MEDIA_URL = "/media/"
 
+
+#setting uo storage backends for media and static files
+
 STORAGES = {
     "default": {
         "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",
