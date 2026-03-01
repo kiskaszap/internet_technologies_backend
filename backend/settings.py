@@ -30,6 +30,17 @@ ALLOWED_HOSTS = [
     "kiskaszap1.pythonanywhere.com",
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://internet-technologyfront-end.vercel.app",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    "authorization",
+    "content-type",
+]
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
