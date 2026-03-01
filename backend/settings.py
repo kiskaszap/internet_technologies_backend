@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     "corsheaders",
      # Main business logic app
     "marketplace",
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 
@@ -90,8 +92,8 @@ CSRF_TRUSTED_ORIGINS = [
 # Required because project extends AbstractUser
 AUTH_USER_MODEL = "marketplace.User"
 # Supports image uploads for listings
-MEDIA_ROOT = "/var/data/media"
-MEDIA_URL = "/media/"
+
+
 
 
 
@@ -192,3 +194,10 @@ EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = "UofG Marketplace <kaszap.nagy.balint@gmail.com>"
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    "API_KEY": os.environ.get("CLOUDINARY_API_KEY"),
+    "API_SECRET": os.environ.get("CLOUDINARY_API_SECRET"),
+}
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
